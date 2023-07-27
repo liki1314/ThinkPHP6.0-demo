@@ -1,0 +1,72 @@
+{
+    "name": "topthink/think",
+    "description": "the new thinkphp framework",
+    "type": "project",
+    "keywords": [
+        "framework",
+        "thinkphp",
+        "ORM"
+    ],
+    "homepage": "http://thinkphp.cn/",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "liu21st",
+            "email": "liu21st@gmail.com"
+        },
+        {
+            "name": "yunwuxin",
+            "email": "448901948@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "topthink/framework": "^6.0.0",
+        "topthink/think-orm": "^2.0",
+        "topthink/think-multi-app": "^1.0",
+        "tlingc/think-aliyunsls": "^1.0",
+        "topthink/think-queue": "^3.0",
+        "obs/esdk-obs-php": "^3.19",
+        "phpoffice/phpspreadsheet": "^1.15",
+        "elasticsearch/elasticsearch": "^7.10",
+        "overtrue/wechat": "~4.0",
+        "yansongda/pay": "^2.10",
+        "topthink/think-migration": "^3.0",
+        "jpush/jpush": "^3.6",
+        "endroid/qr-code": "^4.2",
+        "yunwuxin/think-cron": "^3.0",
+        "overtrue/easy-sms": "^2.0",
+        "zhushide/thinkphp-filesystem-cloud": "^1.0",
+        "qcloud/cos-sdk-v5": "v2.1.1",
+        "zhushide/tp-jwt-auth": "^1.2",
+        "tencentcloud/tencentcloud-sdk-php": "^3.0",
+        "google/protobuf": "^3.19",
+        "paypal/paypal-checkout-sdk": "^1.0"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^4.2",
+        "topthink/think-trace":"^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "app",
+            "GPBMetadata\\": "app/common/protos/GPBMetadata",
+            "Cls\\": "app/common/protos/Cls"
+        },
+        "psr-0": {
+            "": "extend/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "allow-plugins": {
+            "easywechat-composer/easywechat-composer": true
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@php think service:discover",
+            "@php think vendor:publish"
+        ]
+    }
+}

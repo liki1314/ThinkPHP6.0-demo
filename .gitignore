@@ -1,0 +1,10 @@
+/.idea
+/.vscode
+/vendor
+.env
+.travis.yml
+/public/.htaccess
+/public/storage/*
+.DS_Store
+http-client.env.json
+/api_http
